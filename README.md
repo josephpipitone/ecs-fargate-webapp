@@ -91,7 +91,15 @@ GitHub → CodePipeline → CodeBuild → ECR → ECS Fargate → ALB → Intern
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. You are free to use, modify, distribute, and do whatever you want with these files - see the LICENSE file for details.
+
+## Future Enhancements
+
+- **Infrastructure as Code**: Create Terraform or CloudFormation templates to automate the creation of all AWS prerequisites (ECR, ECS cluster, ALB, CodePipeline, IAM roles)
+- **Multi-Environment Support**: Add configurations for dev/staging/production environments
+- **Monitoring Dashboard**: Integrate CloudWatch dashboards and alerts for pipeline and application metrics
+- **Security Scanning**: Add automated vulnerability scanning for container images
+- **Cost Optimization**: Implement spot instances for CodeBuild and cost allocation tags
 
 ## Support
 
