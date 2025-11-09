@@ -1,5 +1,13 @@
 version: 0.2
 
+env:
+  variables:
+    AWS_DEFAULT_REGION: "us-east-1"
+    AWS_ACCOUNT_ID: "740203489195"
+    IMAGE_REPO_NAME: "pipitone"
+    IMAGE_TAG: "latest"
+    CONTAINER_NAME: "hello-world-container"
+
 phases:
   pre_build:
     commands:
