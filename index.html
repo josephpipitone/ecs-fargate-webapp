@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Exploration Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .mars-gradient {
+            background: linear-gradient(135deg, #CD5C5C 0%, #8B4513 50%, #DC143C 100%);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello World</h1>
-    <p>Welcome</p>
+<body class="mars-gradient min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-6xl font-bold text-white mb-4 floating">
+                🚀 Mars Exploration Test
+            </h1>
+            <p class="text-xl text-orange-200 mb-8">
+                Testing AWS ECS Fargate, CodePipeline, and CodeBuild Components
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-black bg-opacity-30 rounded-2xl p-8 backdrop-blur-sm">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Mission Components</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-4 h-4 bg-green-400 rounded-full"></div>
+                            <span class="text-white">AWS ECS Fargate - Container Orchestration</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+                            <span class="text-white">AWS CodePipeline - CI/CD Automation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-4 h-4 bg-purple-400 rounded-full"></div>
+                            <span class="text-white">AWS CodeBuild - Docker Image Building</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
+                            <span class="text-white">Amazon ECR - Container Registry</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+                            <span class="text-white">Application Load Balancer - Traffic Distribution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                         alt="Mars Surface"
+                         class="rounded-xl shadow-2xl mx-auto mb-4 floating"
+                         style="max-width: 400px; height: 300px; object-fit: cover;">
+                    <p class="text-orange-200 text-sm">Mars Surface - Perseverance Rover Mission</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="inline-block bg-white bg-opacity-10 rounded-lg p-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">System Status</h3>
+                    <div class="flex justify-center space-x-4">
+                        <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm">ECS: Active</span>
+                        <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Pipeline: Running</span>
+                        <span class="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Build: Success</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-orange-200">
+                    This page is served by Nginx in a Docker container, deployed via AWS ECS Fargate with automated CI/CD pipelines.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
