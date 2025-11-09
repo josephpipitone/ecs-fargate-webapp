@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TASK_DEFINITION>
+        TaskDefinition: hello-world-app
         LoadBalancerInfo:
           ContainerName: "hello-world-container"
           ContainerPort: 80
