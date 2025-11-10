@@ -1,12 +1,12 @@
 # AWS ECS Fargate CI/CD Template
 
-A reusable template for deploying containerized applications on AWS ECS Fargate with automated CI/CD pipelines using CodePipeline and CodeBuild. This template eliminates the need for EC2 instances as Docker build servers, providing a cost-effective, serverless build and deployment solution that can be adapted for various application types.
+A reusable template for deploying containerized applications on AWS ECS Fargate with automated CI/CD pipelines using CodePipeline and CodeBuild. This template may reduce the need for EC2 instances as Docker build servers, providing a cost-effective, serverless build and deployment solution that can be adapted for various application types.
 
 ## Overview
 
 This template provides a complete serverless CI/CD pipeline for containerized applications on AWS, featuring:
 
-- **Cost-Effective Builds**: Uses CodeBuild instead of EC2 instances for Docker image builds
+- **Cost-Effective Builds**: Uses CodeBuild for Docker image builds
 - **Automated Pipeline**: Full CI/CD with CodePipeline, CodeBuild, and CodeDeploy
 - **Serverless Infrastructure**: ECS Fargate for container orchestration without server management
 - **Production-Ready**: Includes load balancing, blue/green deployments, and monitoring
